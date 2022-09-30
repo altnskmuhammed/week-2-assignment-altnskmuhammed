@@ -1,4 +1,6 @@
+DEPLOY SİTE
 
+https://63370a9aff6f00004cfe3545--splendid-longma-20f1cc.netlify.app/todos.html#
 
 HTTP STATUS NEDİR ?
 
