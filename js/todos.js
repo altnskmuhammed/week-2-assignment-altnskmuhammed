@@ -154,30 +154,27 @@ const renderTodos = (page = 1) => {
     renderTodos();
   });
 };
-page = 1;
+
 document.querySelectorAll(".page-item").forEach((btn) => {
   btn.addEventListener("click", () => {
     let data_id = btn.getAttribute("data-id");
     data_id = Number(data_id);
     if (data_id == 1) {
       renderTodos(1);
-    }
-    if (data_id == 2) {
+    } else if (data_id == 2) {
       renderTodos(2);
-    }
-    if (data_id == 3) {
+    } else if (data_id == 3) {
       renderTodos(3);
-    }
-    if (data_id == 4) {
+    } else if (data_id == 4) {
       renderTodos(page++);
-    }
-    if (data_id == 0) {
-      renderTodos(page++);
-    }
 
-    page++;
-    current_page = Number(data_id);
-    renderTodos(current_page);
+      console.log(page);
+    } else if (data_id == 0) {
+      renderTodos(page--);
+    } else {
+      page = Number(data_id);
+      renderTodos(page);
+    }
   });
 });
 
